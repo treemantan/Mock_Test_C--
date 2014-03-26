@@ -10,7 +10,7 @@ are stored here. Hopefully it helps.
 Mock_Test Directory are the branch storing all the solutions to 2008 to 2011.
 
 
-Main2012 and Main2013 are the answers for 12 and 13 Test respectively.
+MockTestMain2013 and MockTestMain2013 are the answers for 12 and 13 Test respectively.
 
 
 
