@@ -1,0 +1,65 @@
+#include <iostream>
+#include <cmath>
+#include <vector>
+#include <numeric>
+#include <map>
+
+using namespace std;
+
+
+//This is not the best or clear way to do it. Alternative way is to redefine a mathvector class and its member function and it is more easily to be extended.
+double dot(vector<double> &a, vector<double> &b){
+  double res=0;
+  for(unsigned int i=0;i<a.size();i++){
+    res+=a[i]*b[i];
+  }
+  return res;
+}
+
+vector<double> product(vector<double> &v,double r){
+  vector<double> res;
+  for(int i=0;i<v.size();i++){
+    res.push_back(v[i]/r);
+  }
+  return res;
+}
+
+vector<double> myminus(vector<double> &v, vector<double> & q){
+  vector<double> res;
+  for(int i=0;i<v.size();i++){
+    res.push_back(v[i]-q[i]);
+  }
+  return res;
+}
+
+void schimit(vector<vector<double> > &q,vector<vector<double> > &ma){
+  vector<vector<double> > v;
+  v.push_back(ma[0]);
+  q.push_back(product(v[0],sqrt(dot(v[0],v[0]))));
+  for(int i=1;i<ma.size();i++){
+    vector<double> temp;
+    temp=ma[i];
+    for(int j=0;j<i;j++)
+     my minus(temp,product(q[j],1./dot(ma[i],q[j])));
+    v.push_back(temp);
+    q.push_back(product(temp,sqrt(dot(temp,temp))));
+    temp.clear();
+  }
+
+
+}
+
+int main(){
+  vector<vector<double> > ma;
+  double a1[]={2,3,13};
+  double a2[]={14,0,23};
+  vector<double> ma1(a1,a1+3),ma2(a2,a2+3);
+  
+
+
+
+
+
+
+
+}
